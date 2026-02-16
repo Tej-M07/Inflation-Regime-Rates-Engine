@@ -37,18 +37,11 @@ Standard OLS calibration on historical data often suggests a mean reversion leve
 
 ---
 
-### Installation & Usage
+### Libraries
 
 **Dependencies**
 ```bash
 pip install numpy pandas pandas-datareader matplotlib seaborn scikit-learn
-
-```
-
-**Running the Engine**
-
-```bash
-python inflation_risk_engine.py
 
 ```
 
