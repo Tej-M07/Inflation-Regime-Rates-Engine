@@ -40,17 +40,37 @@ Standard OLS calibration on historical data often suggests a mean reversion leve
 ### Installation & Usage
 
 **Dependencies**
+```bash
 pip install numpy pandas pandas-datareader matplotlib seaborn scikit-learn
 
-#### Output
+```
+
+**Running the Engine**
+
+```bash
+python inflation_risk_engine.py
+
+```
+
+---
+
+### Output
+
 The script generates a 4-panel risk dashboard:
 
-* **Regime Plot: Visualizes the "Inflation Era" vs. historical ZIRP.
-* **PCA Loadings: Factor sensitivities for each tenor (3M to 30Y).
-* **Monte Carlo Forecast: 10,000 rate paths projected 1 year forward.
-* **Tail Risk Distribution: Histogram comparing 99% VaR vs. 99% Expected Shortfall.
+* **Regime Plot:** Visualizes the "Inflation Era" vs. historical ZIRP.
+* **PCA Loadings:** Factor sensitivities for each tenor (3M to 30Y).
+* **Monte Carlo Forecast:** 10,000 rate paths projected 1 year forward.
+* **Tail Risk Distribution:** Histogram comparing 99% VaR vs. 99% Expected Shortfall.
+
+---
 
 ### Limitations & Discussion
-* **One-Factor Constraint: The Vasicek model assumes the entire curve is perfectly correlated (driven by one source of uncertainty). In reality, short rates (Fed driven) and long rates (Macro driven) can decorrelate. A 2-Factor Hull-White model would be the next logical upgrade.
-* **Normality Assumption: The simulation assumes Gaussian shocks. Since financial markets exhibit excess kurtosis (fat tails), this model may underestimate "Black Swan" probability compared to a Student-t or Jump Diffusion model.
-* **Negative Rates: While unlikely in the current US regime, the Vasicek framework mathematically permits negative rates, unlike the Cox-Ingersoll-Ross (CIR) model.
+
+* **One-Factor Constraint:** The Vasicek model assumes the entire curve is perfectly correlated (driven by one source of uncertainty). In reality, short rates (Fed driven) and long rates (Macro driven) can decorrelate. A **2-Factor Hull-White model** would be the next logical upgrade.
+* **Normality Assumption:** The simulation assumes Gaussian shocks. Since financial markets exhibit excess kurtosis (fat tails), this model may underestimate "Black Swan" probability compared to a **Student-t** or **Jump Diffusion** model.
+* **Negative Rates:** While unlikely in the current US regime, the Vasicek framework mathematically permits negative rates, unlike the Cox-Ingersoll-Ross (CIR) model.
+
+```
+
+```
