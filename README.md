@@ -64,6 +64,3 @@ The script generates a 4-panel risk dashboard:
 * **Normality Assumption:** The simulation assumes Gaussian shocks. Since financial markets exhibit excess kurtosis (fat tails), this model may underestimate "Black Swan" probability compared to a **Student-t** or **Jump Diffusion** model.
 * **Negative Rates:** While unlikely in the current US regime, the Vasicek framework mathematically permits negative rates, unlike the Cox-Ingersoll-Ross (CIR) model.
 
-```
-
-```
